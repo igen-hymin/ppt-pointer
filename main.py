@@ -6,7 +6,7 @@ import qrcode
 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(("google.com", 443))
+sock.connect(("naver.com", 443))
 
 web_qr = qrcode.make(f"http://{sock.getsockname()[0]}:5004")
 web_qr.save("pointer_qr.png")
